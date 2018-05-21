@@ -9,7 +9,13 @@ import android.view.View;
 
 import com.example.valentin.zaptowork.R;
 
+import static com.example.valentin.zaptowork.Utils.ActivityUtils.addFragmentToActivity;
+
 public class SettingsActivity extends AppCompatActivity {
+
+    SettingsFragment settingsFragment;
+
+    SettingsPresenter settingsPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +23,11 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setttings);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if(settingsFragment == null){
+            settingsFragment= settingsFragment.newInstance();
+            addFragmentToActivity(getFragmentManager(),settingsFragment,R.id.content_layout);
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

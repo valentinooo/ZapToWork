@@ -21,8 +21,7 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
 
     SettingsContract.Presenter mPresenter;
 
-
-
+    Button checkConnectivityButton;
     EditText addressServer;
 
     public static SettingsFragment newInstance() {
@@ -32,32 +31,13 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.content_setttings, container, false);
+      /*  View root = inflater.inflate(R.layout.content_setttings, container, false);
 
         addressServer = root.findViewById(R.id.editText);
 
-        final Button checkConnectivityButton =(Button) root.findViewById(R.id.button_id);
-        checkConnectivityButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addressServer.setVisibility(View.INVISIBLE);
-                Toast.makeText(getContext(),"Working",Toast.LENGTH_LONG).show();
-
-                String tmb = "8.8.8.8";
-                //String tmb = addressServer.getText().toString();
-               /*try {
-
-                    if( InetAddress.getByName(tmb).isReachable(10000))
-                        Toast.makeText(getActivity(),"Working",Toast.LENGTH_LONG).show();
-                    else
-                        Toast.makeText(getActivity(),"Pas Disponible",Toast.LENGTH_LONG).show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }*/
-            }
-        });
-        return root;
+        checkConnectivityButton =(Button) root.findViewById(R.id.button_id);
+*/
+        return null;
     }
 
     @Override
@@ -68,7 +48,6 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
 
     }
 }

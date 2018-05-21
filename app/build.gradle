@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.valentin.zaptowork"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -31,7 +31,7 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:26.1.0"
     implementation "com.android.support:support-v4:26.1.0"
     implementation "com.android.support.test.espresso:espresso-idling-resource:3.0.2"
-    implementation "com.google.guava:guava:22.0"
+    implementation "com.google.guava:guava:23.0-android"
     implementation "android.arch.persistence.room:runtime:1.1.0"
     annotationProcessor "android.arch.persistence.room:compiler:1.1.0"
 
